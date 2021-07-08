@@ -15,6 +15,13 @@ const casesTypeColors = {
     half_op: "rgba(125, 215, 29, 0.5)",
     multiplier: 1200,
   },
+
+  vaccinated: {
+    hex: "#B5EAEA",
+    rgb: "rgb(125, 215, 29)",
+    half_op: "rgba(125, 215, 29, 0.5)",
+    multiplier: 1600,
+  },
   deaths: {
     hex: "#fb4443",
     rgb: "rgb(251, 68, 67)",
@@ -62,6 +69,11 @@ export const showDataOnMap = (data, casesType = "cases") =>
           <div className="info-recovered">
             Recovered: {numeral(country.recovered).format("0,0")}
           </div>
+
+          <div className="info-vaccinated">   {/* vaccination */}
+            Vaccinated: {numeral(country.vaccinated).format("0,0")}
+          </div>
+
           <div className="info-deaths">
             Deaths: {numeral(country.deaths).format("0,0")}
           </div>
